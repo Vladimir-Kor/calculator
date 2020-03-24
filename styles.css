@@ -50,14 +50,14 @@ body {
     outline: none;
 }
 .reset_last {
-    background-size: 96%;
+    background-size: 99%;
     background-image: url(../calculator/images/button.jpg);
     border: none;
-    width: 28px;
-    height: 15.5px;
+    width: 21px;
+    height: 12px;
     cursor: pointer;
     position: relative;
-    left: 83%;
+    left: 84%;
     outline: none;
 }
 .all_buttons { 
