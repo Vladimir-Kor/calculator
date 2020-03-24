@@ -151,7 +151,7 @@ console.log(correctArr);
 
     if (correctArr[1] == '*'){
       let count = correctArr[0] / correctArr[2];
-      let changed = eval(correctArr[0] / count);
+      let changed = Math.round(eval(correctArr[0] / count)*100)/100;
       allArr.splice(-3, 3, ''+changed);  // меняем местами последние два числа 
       input.value = allArr.join('');     // сщединяет все елементы массива для вставки в инпут
       return
@@ -166,7 +166,7 @@ console.log(correctArr);
     
     if (correctArr[1] == '+' || '-') {
       let count = correctArr[0] / 100 * correctArr[2];
-      let changed = eval(correctArr[0] += correctArr[1] += count);
+      let changed = Math.round(eval(correctArr[0] += correctArr[1] += count)*100)/100;
       allArr.splice(-3, 3, ''+changed);
       input.value = allArr.join('');
       return   
