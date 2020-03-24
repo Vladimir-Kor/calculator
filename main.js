@@ -69,10 +69,16 @@ function insertSymbol(symbol){
 }
 
 function pow(){
+  if ((input.value[input.value.length - 1] != +input.value[input.value.length - 1])) {
+    input.value = input.value.slice(0,-1);
+  }
+
   if ((input.value != '') && (input.value != '-')){
     output.value = Math.pow(input.value, 2);
     input.value = '';
+    return
   }
+
   else {
     output.value = '';
     return
