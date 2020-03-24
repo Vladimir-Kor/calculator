@@ -64,7 +64,7 @@ function insertSymbol(symbol){
   else {
     input.value += symbol; 
     symbolCounter++;
-    pointCounter = 0;///////////////////////////
+    pointCounter = 0;
   }
 }
 
@@ -84,9 +84,10 @@ function addAfterZerro (point){
     output.value = '';
   } // чистит архив
 
-  if (input.value.length == 0 || (input.value[input.value.length - 1] =='-')) {
+  if ((input.value[input.value.length - 1] != +input.value[input.value.length - 1]) && (input.value[input.value.length - 1] != '.')) {
     input.value += 0 + point;
     pointCounter++;
+    symbolCounter = 0;
     return
   } // при вводе '.' автоматтически подставит в пустой или если полседний символ отрицательны 0.
 
@@ -94,24 +95,23 @@ function addAfterZerro (point){
     return
   } // недопускает дубликата ..
 
-  if ((pointCounter == 0) && (symbolCounter == 0)) {
+  if ((pointCounter == 0) && (symbolCounter == 0) && (input.value !='')) {
     input.value += point;
     pointCounter++;
+    
     return
   } // вставляет первую '.'  
 
-  if ((pointCounter > 0) && (symbolCounter > 0)) {
+  if (((pointCounter > 0) && (symbolCounter != 0)) || ((symbolCounter > 0) && (pointCounter == 0))) {
     input.value += point;
+    pointCounter++;
     symbolCounter = 0;
     return
   } // всавляет . в последующие выражения
 
-  if ((input.value[input.value.length - 2] >= 0 ) && (input.value[input.value.length - 1] != '-')) {
-    input.value += 0 + point;
-    pointCounter++;
+  if ((symbolCounter == 0) && (pointCounter > 0)) {
     return
-  } // всавляет . в последующие выражения
-  
+  } // не допустит 2 точки между знаками
 }
 
 function reset() {
@@ -177,7 +177,7 @@ function count() {
   } // убирает последний символ для правильного подсчета
 
   else {
-    output.value = Math.ceil(eval(value) * 1e5) / 1e5;
+    output.value = Math.round(eval(value)*1000)/1000;
     input.value = '';
     pointCounter = 0;
     symbolCounter = 0;
