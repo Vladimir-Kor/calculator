@@ -150,17 +150,16 @@ console.log(correctArr);
   if (correctArr.length == 3) {
 
     if (correctArr[1] == '*'){
-      let count = correctArr[0] / correctArr[2];
-      let changed = Math.round(eval(correctArr[0] / count)*100)/100;
-      allArr.splice(-3, 3, ''+changed);  // меняем местами последние два числа 
+      let count = correctArr[0] * correctArr[2] / 100;
+      allArr.splice(-3, 3, ''+count);  // меняем местами последние два числа 
       input.value = allArr.join('');     // сщединяет все елементы массива для вставки в инпут
       return
     }
 
     if (correctArr[1] == '/'){
-      let count = correctArr[0] / correctArr[2];
-      let changed = eval(correctArr[0] * count);
-      allArr.splice(-3, 3, ''+changed);
+      let count = correctArr[0] / correctArr[2] * 100;
+      allArr.splice(-3, 3, ''+count);
+      input.value = allArr.join('');
       return
     }
     
