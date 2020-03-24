@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>калькулятор</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
+    </head>
+    <body>
+        <div id="calculator">
+            <div class="aria">
+                <textarea id="input" cols="17" rows="4" class="input" readonly type="text"></textarea>
+                <input id="output" readonly type="text" class="output">
+                <input type="button" class="reset_last" onclick="reset()">
+            </div>
+            <div id = "buttons" class="all_buttons">
+                <input type="button" value="C" class="red-button" onclick="clean()">
+                <input type="button" value="×²" class="blue-button" onclick="pow()">
+                <input type="button" value="%" class="blue-button" onclick="countPercent('%')">
+                <input type="button" value=&divide; class="blue-button" onclick="insertSymbol('/')">
+                <input type="button" value="7" class="black-button" onclick="insertNumber(7)">
+                <input type="button" value="8" class="black-button" onclick="insertNumber(8)">
+                <input type="button" value="9" class="black-button" onclick="insertNumber(9)">
+                <input type="button" value=&times; class="blue-button" onclick="insertSymbol('*')">
+                <input type="button" value="4" class="black-button" onclick="insertNumber(4)">
+                <input type="button" value="5" class="black-button" onclick="insertNumber(5)">
+                <input type="button" value="6" class="black-button" onclick="insertNumber(6)">
+                <input type="button" value="-" class="blue-button" onclick="insertSymbol('-')">
+                <input type="button" value="1" class="black-button" onclick="insertNumber(1)">
+                <input type="button" value="2" class="black-button" onclick="insertNumber(2)">
+                <input type="button" value="3" class="black-button" onclick="insertNumber(3)">
+                <input type="button" value="+" class="blue-button" onclick="insertSymbol('+')">
+                <input type="button" value="." class="black-button" onclick="addAfterZerro('.')">
+                <input type="button" value="0" class="black-button" onclick="insertNumber(0)">
+                <input type="button" value="=" class="equ-button" onclick="count()">
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+    <footer class="footer">Create By Vladimir Kornienko</footer>
+</html>

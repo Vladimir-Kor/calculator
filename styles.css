@@ -1,0 +1,99 @@
+body {
+    background-color: #ffffff;
+    width: 364px;
+    height: 745px; 
+    margin: 40px auto;
+    user-select:none;
+}
+#calculator {
+    padding-top: 117px;
+    margin-top: 100px;
+    height: 595px; 
+    background-image:url(../calculator/images/iphone.jpg);   
+}
+.aria { 
+    height: 230px;
+    width: 321px;
+    margin-left: 23px;
+    background-color: #F5F6F8;
+
+}
+.input {
+    height: 143px;
+    width: 306px;
+    border: none;
+    background-color: inherit;
+    font-size: 33px;
+    text-align: right;
+    color: grey;
+    white-space: normal;
+    outline: none;
+    position: relative;
+    resize: none;
+    overflow: hidden;
+    font-family: sans-serif;
+    padding-right: 10px;
+    padding-left: 5px;
+} 
+.output{
+    font-size: 48px;
+    color: #59A7E5;
+    width: 311px;
+    height: 54px;
+    text-align: right;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+    border: none;
+    background-color: #F5F6F8;
+    outline: none;
+}
+.reset_last {
+    background-size: 100%;
+    background-image: url(../calculator/images/button.jpg);
+    border: none;
+    width: 28px;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+    left: 83%;
+    outline: none;
+}
+.all_buttons { 
+    word-spacing: -4px;
+    margin-left: 23.5px;
+}
+.black-button,
+.blue-button,
+.red-button,
+.equ-button {
+    width: 23.55%;
+    height: 50px;    
+    outline: none;
+    cursor: pointer;
+    border-width: 0.5px;
+    font-size: 23px;
+    font-family: sans-serif;
+    background-color:rgb(254, 254, 254);
+}
+.black-button {
+    color: rgba(0, 0, 0, 0.692);
+}
+.blue-button {
+    color: #59A7E5;
+}
+.red-button {
+    color: red;
+}
+.equ-button {
+    color: white;
+    width: 47.1%;
+    background-color: #59A7E5;
+    border: none;
+}
+.footer {
+    text-align: center;
+    color: darkgray;
+    margin-top: 15px;
+}
