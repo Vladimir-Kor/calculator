@@ -53,11 +53,11 @@ body {
     background-size: 100%;
     background-image: url(../calculator/images/button.jpg);
     border: none;
-    width: 6%;
-    height: 4.8%;
+    width: 21px;
+    height: 11.89px;
     cursor: pointer;
     position: relative;
-    left: 84.5%;
+    left: 84%;
     outline: none;
 }
 .all_buttons { 
