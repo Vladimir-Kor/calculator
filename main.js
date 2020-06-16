@@ -23,6 +23,11 @@ function insertNumber(number) {
 
 function insertSymbol(symbol){
 
+  if(output.value != '' && symbol ){
+    input.value += output.value + symbol
+    return 
+  } // работа со значением архива
+  
   if (symbol){
     output.value = '';
   } // чистит архив 
