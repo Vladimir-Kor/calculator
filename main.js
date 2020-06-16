@@ -24,7 +24,8 @@ function insertNumber(number) {
 function insertSymbol(symbol){
 
   if(output.value != '' && symbol ){
-    input.value += output.value + symbol
+    input.value += output.value + symbol;
+    output.value = '';
     return 
   } // работа со значением архива
   
